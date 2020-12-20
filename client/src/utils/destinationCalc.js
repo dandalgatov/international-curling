@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function destinationCalc(distance, heading, coordinates, setCoordinates) {
     const R = 6378.1 //Radius of Earth
     const brng = heading * (Math.PI / 180) // converting degrees to radians
