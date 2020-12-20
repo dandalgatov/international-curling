@@ -1,7 +1,7 @@
 //Main
 import { useState } from "react";
 import { Cartesian3, Math as CesiumMath } from "cesium";
-import { Viewer, Entity, CameraFlyTo, ScreenSpaceCameraController, Model } from "resium";
+import { Viewer, CameraFlyTo, ScreenSpaceCameraController } from "resium";
 
 //CSS
 import './App.css'
@@ -11,10 +11,9 @@ import useInterval from './utils/useInterval'
 import destinationCalc from './utils/destinationCalc'
 
 //Assets
-import Arrow from './assets/arrow.png'
 import Stone from './assets/stone.png'
 import Road from './assets/frosted_road.png'
-import Sweeper from './assets/sweeper.gif'
+// import Sweeper from './assets/sweeper.gif'
 import './App.css'
 
 
