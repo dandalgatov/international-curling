@@ -2,7 +2,158 @@
   text-align: center;
 }
 
-.button-row {
+.user-input {
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+.user-input > input, datalist {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  color: red;
+}
+
+
+.road {
+  margin: auto;
+  height: 100%;
+  width: 50%;
+}
+
+.stone {
+  z-index: 5;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 45vh;
+}
+
+.up-down-1{
+  animation: MoveUpDown 1s linear;
+}
+.up-down-2{
+  animation: MoveUpDown 2s linear;
+}
+.up-down-3{
+  animation: MoveUpDown 3s linear;
+}
+.up-down-4{
+  animation: MoveUpDown 4s linear;
+}
+.up-down-5{
+  animation: MoveUpDown 5s linear;
+}
+.up-down-6{
+  animation: MoveUpDown 6s linear;
+}
+.up-down-7{
+  animation: MoveUpDown 7s linear;
+}
+.up-down-8{
+  animation: MoveUpDown 8s linear;
+}
+.up-down-9{
+  animation: MoveUpDown 9s linear;
+}
+
+.up-down-10{
+  animation: MoveUpDown 10s linear;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    margin-bottom: 45vh;
+  }
+  25% {
+    margin-bottom: 40vh;
+  }
+  50% {
+    margin-bottom: 65vh;
+  }
+  75% {
+    margin-bottom: 60vh;
+  }
+
+}
+
+.sweeper-container {
   position: absolute;
   z-index: 2;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+
+  /* display: grid;
+  place-items: center; */
+}
+
+.sweeper {
+  height: 100px;
+  /* margin-top: 30vh; */
+}
+
+button { 
+  color: #FFF; 
+  background-color:#C3392A; 
+  min-width: 50px;
+  width: 40%;
+  height: 70px;
+  border-radius: 83.3333px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26.6667px;
+  text-align: center;
+  border: none;  
+  padding: 0px 15px 0px 15px;
+  margin: 5vh;
+}
+
+#meter {
+  position: absolute;
+  margin: 0 auto 4.5em;
+  width: 450px;
+  height: 50px;
+  right: 5vw;
+  /* display: block; */
+  z-index: 2;
+  transform-origin: right;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+#meter::-webkit-meter-bar {
+  border-radius: 0;
+  border-color: white;
+  background: rgba(0,0,0,0);
+}
+#meter::-webkit-meter-suboptimum-value {
+  background: linear-gradient(to right, green , yellow);
+}
+#meter::-webkit-meter-optimum-value {
+  background: linear-gradient(to right, green , yellow);
+}
+#meter::-webkit-meter-even-less-good-value {
+  background: linear-gradient(to right, green , yellow, red);
+}
+
+.cesium-viewer-bottom {
+  display: none !important;
+}
+
+@media screen and (max-width: 700px){
+  .user-input > input, datalist {
+    width: 80%;
+  }
+  .road {
+    width: 100%;
+  }
 }
